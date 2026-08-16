@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f2f4f7;
+  font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+  color: #2b2f38;
+  padding: 24px;
+}
+
+.container {
+  width: 100%;
+  max-width: 480px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  padding: 32px 28px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin: 0 0 8px;
+  color: #1f6feb;
+}
+
+.progress {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.question-text {
+  font-size: 1.1rem;
+  font-weight: bold;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  min-height: 3em;
+}
+
+.choices {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.choice-btn {
+  padding: 14px 16px;
+  font-size: 1rem;
+  text-align: left;
+  border: 2px solid #a9c6f5;
+  border-radius: 10px;
+  background: #eef5ff;
+  color: #1a3f7a;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.choice-btn:hover:not(:disabled) {
+  border-color: #1f6feb;
+  background: #dbe9ff;
+}
+
+.choice-btn:disabled {
+  cursor: default;
+}
+
+.choice-btn.correct {
+  background: #e6f7ec;
+  border-color: #34a853;
+  color: #1e7a37;
+  font-weight: bold;
+}
+
+.choice-btn.incorrect {
+  background: #fdecec;
+  border-color: #ea4335;
+  color: #b3261e;
+  font-weight: bold;
+}
+
+.feedback {
+  min-height: 1.6em;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.feedback.correct {
+  color: #1e7a37;
+}
+
+.feedback.incorrect {
+  color: #b3261e;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background: #1f6feb;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btn:hover:not(:disabled) {
+  background: #1a5fc9;
+}
+
+.btn:disabled {
+  background: #b7c3d1;
+  cursor: not-allowed;
+}
+
+#result-screen {
+  text-align: center;
+}
+
+.score-text {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 16px 0 24px;
+  color: #1f6feb;
+}
+
+.hidden {
+  display: none;
+}
